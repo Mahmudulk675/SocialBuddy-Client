@@ -20,7 +20,7 @@ const Post = ({ post }) => {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://localhost:8000/api/users?userId=${post.userId}`
+        `https://frozen-bastion-16792.herokuapp.com/api/users?userId=${post.userId}`
       );
       setUser(res.data);
     };
