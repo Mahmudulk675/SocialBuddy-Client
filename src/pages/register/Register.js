@@ -22,10 +22,7 @@ const Register = () => {
         password: password.current.value,
       };
       try {
-        await axios.post(
-          "https://frozen-bastion-16792.herokuapp.com/api/auth/register",
-          user
-        );
+        await axios.post("http://localhost:8000/api/auth/register", user);
         history.push("/login");
       } catch (err) {
         console.log(err);

@@ -16,7 +16,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `https://frozen-bastion-16792.herokuapp.com/api/users?username=${username}`
+        `http://localhost:8000/api/users?username=${username}`
       );
       setUser(res.data);
     };

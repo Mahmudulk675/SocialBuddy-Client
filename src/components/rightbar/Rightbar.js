@@ -19,7 +19,7 @@ const Rightbar = ({ user }) => {
     const getFriends = async () => {
       try {
         const friendList = await axios.get(
-          `https://frozen-bastion-16792.herokuapp.com/api/users/friends/${user._id}`
+          `http://localhost:8000/api/users/friends/${user._id}`
         );
         setFriends(friendList.data);
       } catch (err) {
@@ -33,9 +33,7 @@ const Rightbar = ({ user }) => {
     try {
       if (followed) {
         await axios.put(
-          "https://frozen-bastion-16792.herokuapp.com/api/users/" +
-            user._id +
-            "/unfollow",
+          "http://localhost:8000/api/users/" + user._id + "/unfollow",
           {
             userId: currentUser._id,
           }
@@ -43,9 +41,7 @@ const Rightbar = ({ user }) => {
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
         await axios.put(
-          "https://frozen-bastion-16792.herokuapp.com/api/users/" +
-            user._id +
-            "/follow",
+          "http://localhost:8000/api/users/" + user._id + "/follow",
           {
             userId: currentUser._id,
           }
