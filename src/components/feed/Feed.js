@@ -14,9 +14,13 @@ const Feed = ({ username }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = username
-        ? await axios.get("http://localhost:8000/api/posts/profile/" + username)
+        ? await axios.get(
+            "https://frozen-bastion-16792.herokuapp.com/api/posts/profile/" +
+              username
+          )
         : await axios.get(
-            "http://localhost:8000/api/posts/timeline/" + user._id
+            "https://frozen-bastion-16792.herokuapp.com/api/posts/timeline/" +
+              user._id
           );
       setPosts(
         res.data.sort((p1, p2) => {

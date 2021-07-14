@@ -49,7 +49,8 @@ const Messenger = () => {
     const getConversations = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/conversations/" + user._id
+          "https://frozen-bastion-16792.herokuapp.com/api/conversations/" +
+            user._id
         );
 
         setConversations(res.data);
@@ -64,7 +65,8 @@ const Messenger = () => {
     const getMessages = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/messages/" + currentChat?._id
+          "https://frozen-bastion-16792.herokuapp.com/api/messages/" +
+            currentChat?._id
         );
         setMessages(res.data);
       } catch (err) {
@@ -94,7 +96,7 @@ const Messenger = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/messages/",
+        "https://frozen-bastion-16792.herokuapp.com/api/messages/",
         message
       );
       setMessages([...messages, res.data]);

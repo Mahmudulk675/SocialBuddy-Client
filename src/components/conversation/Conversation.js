@@ -12,7 +12,8 @@ const Conversation = ({ conversation, currentUser }) => {
     const getUser = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/users?userId=" + friendId
+          "https://frozen-bastion-16792.herokuapp.com/api/users?userId=" +
+            friendId
         );
         console.log(res.data);
         setUser(res.data);

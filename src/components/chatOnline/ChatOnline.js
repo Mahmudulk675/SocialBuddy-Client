@@ -9,7 +9,8 @@ const ChatOnline = ({ onlineUsers, currentId, setCurrentChat }) => {
   useEffect(() => {
     const getFriends = async () => {
       const res = await axios.get(
-        "http://localhost:8000/api/users/friends/" + currentId
+        "https://frozen-bastion-16792.herokuapp.com/api/users/friends/" +
+          currentId
       );
       setFriends(res.data);
     };
@@ -21,7 +22,7 @@ const ChatOnline = ({ onlineUsers, currentId, setCurrentChat }) => {
   const handleClick = async (user) => {
     try {
       const res = await axios.get(
-        `http://localhost:8000/api/conversations/find/${currentId}/${user._id}`
+        `https://frozen-bastion-16792.herokuapp.com/api/conversations/find/${currentId}/${user._id}`
       );
       setCurrentChat(res.data);
     } catch (err) {
