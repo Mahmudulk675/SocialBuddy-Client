@@ -1,5 +1,7 @@
 Live Site:- [https://wonderful-rosalind-ca341b.netlify.app/]
 
+SocialBuddy is a demo social media app built using React, NodeJs, MongoDB, ExpressJS, Context API, Socket.IO. This app contains all the basic functionality of social applications.
+
 • A social media app to explore all the basic functionalities along with real
 time chat system!
 
