@@ -68,7 +68,11 @@ const Rightbar = ({ user }) => {
             <b>Alex Costa</b> and <b>2 other</b> have birthday today!
           </span>
         </div>
-        <img src={`${PF}ad.png`} alt="" className="rightbarAd" />
+        <img
+          src={`${PF}gratuation_party_invite-01.png`}
+          alt=""
+          className="rightbarAd"
+        />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
